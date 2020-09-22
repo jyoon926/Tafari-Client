@@ -18,12 +18,10 @@ $black: #191919;
 p {
     font-size: 1em;
     line-height: 1.5;
-    font-weight: 300;
 }
 a {
     font-size: 1em;
     line-height: 1;
-    font-weight: 300;
 }
 h1 {
     font-size: 8em;
@@ -119,7 +117,8 @@ body {
     background: url('../img/Group\ 4@2x.png');
     background-size: cover;
     background-repeat: no-repeat;
-    filter: brightness(0.7);
+    background-position: center;
+    filter: brightness(0.9);
 }
 #bg-color {
     z-index: -1;
