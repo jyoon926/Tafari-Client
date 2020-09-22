@@ -114,11 +114,13 @@ body {
     top: 0; left: 0;
     height: 100vh;
     width: 100vw;
-    background: url('../img/Group\ 4@2x.png');
+    background: url('../img/Image\ 1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     filter: brightness(0.9);
+    transition-duration: .1s;
+    transition-timing-function: ease-out;
 }
 #bg-color {
     z-index: -1;
@@ -126,8 +128,11 @@ body {
     top: 0; left: 0;
     height: 100vh;
     width: 100vw;
-    background: $black;
-    opacity: 0;
+    background: rgba(25,25,25,0);
+    opacity: 1;
+    backdrop-filter: blur(4px);
+    transition-duration: .1s;
+    transition-timing-function: ease-out;
 }
 #container {
     max-width: 1110px;
@@ -295,6 +300,9 @@ body {
     h4 {
         font-size: 4vw;
         line-height: 1;
+    }
+    #bg-color {
+        backdrop-filter: blur(0px);
     }
     #menu {
         padding: 2em;

@@ -6,7 +6,7 @@ function scrollFunction() {
     var scale = window.scrollY / window.innerHeight * 0.5;
     $('#bg-image').css("transform", "scale(" + (scale + 1) + ")");
     var opacity = window.scrollY / window.innerHeight * 2;
-    $('#bg-color').css("opacity", opacity);
+    $('#bg-color').css("background", "rgba(25,25,25," + opacity + ")");
     $('#menu').css("background", "linear-gradient(to bottom, rgba(25, 25, 25, " + opacity + "), rgba(25, 25, 25, 0))");
 }
 
