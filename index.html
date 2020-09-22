@@ -27,12 +27,23 @@ http://jacobyoon.cf/
     <div id="menu">
         <a href="/" id="logo">Tafari Client</a>
 
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox">
+            <div class="line top"></div>
+            <div class="line bot"></div>
+        </label>
+        
         <div id="links">
-            <a href="/">Home</a>
-            <a href="#about">About</a>
-            <a href="#community">Community</a>
-            <a href="#faq">FAQ</a>
-            <a href="#download" class="download">Download</a>
+            <a onclick="checkbox()" href="/">Home</a>
+            <a onclick="checkbox()" href="#about">About</a>
+            <a onclick="checkbox()" href="#community">Community</a>
+            <a onclick="checkbox()" href="#faq">FAQ</a>
+            <a onclick="checkbox()" href="#download" class="download">Download</a>
+            <script>
+                function checkbox() {
+                    document.getElementById("checkbox").checked = false;
+                }
+            </script>
         </div>
     </div>
     <div id="bg-image"></div>
@@ -71,7 +82,7 @@ http://jacobyoon.cf/
         </section>
         <div id="community" class="sectionlink"></div>
         <section>
-            <div class="row">
+            <div class="row community">
                 <div class="image"></div>
                 <div class="col">
                     <h2>Our Community</h2>

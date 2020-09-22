@@ -92,6 +92,12 @@ body {
             opacity: 0.4;
         }
     }
+    #checkbox {
+        display: none;
+    }
+    label {
+        display: none;
+    }
     #links {
         display: flex;
         flex-direction: row;
@@ -261,5 +267,192 @@ body {
 @media screen and (max-width: 1100px) {
     html {
         font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    p {
+        font-size: 1em;
+        line-height: 1.5;
+        font-weight: 300;
+    }
+    a {
+        font-size: 1em;
+        line-height: 1;
+        font-weight: 300;
+    }
+    h1 {
+        font-size: 24vw;
+        line-height: 1;
+    }
+    h2 {
+        font-size: 12vw;
+        line-height: 1;
+    }
+    h3 {
+        font-size: 6vw;
+        line-height: 1;
+    }
+    h4 {
+        font-size: 4vw;
+        line-height: 1;
+    }
+    #menu {
+        padding: 2em;
+        #checkbox {
+            position: absolute;
+            top: -100px;
+        }
+        label {
+            z-index: 11;
+            pointer-events: all;
+            position: fixed;
+            top: 43px;
+            right: 32px;
+            height: 10px;
+            width: 34px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .line {
+                height: 2px;
+                width: 34px;
+                background: $white;
+                position: absolute;
+            }
+            .top {
+                transition-duration: .4s;
+                top: 0px;
+            }
+            .bot {
+                top: 8px;
+                transition-duration: .4s;
+            }
+        }
+        #checkbox:checked ~ #links {
+            opacity: 1;
+            pointer-events: all;
+        }
+        #checkbox:checked ~ label {
+            .line {
+                margin: 0;
+                top: 4px;
+            }
+            .top {
+                transform: rotate(45deg);
+            }
+            .bot {
+                transform: rotate(-45deg);
+            }
+        }
+        #links {
+            position: fixed;
+            height: 100%; width: 100vw;
+            top: 0; left: 0;
+            pointer-events: none;
+            opacity: 0;
+            transition-duration: .4s;
+            background: $black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            grid-gap: 1em;
+            a {
+                margin-left: 0;
+                font-size: 12vw;
+                transition-duration: .4s;
+                &:hover {
+                    opacity: 0.4;
+                }
+            }
+        }
+    }
+    #container {
+        width: calc(100% - 4em);
+        #hero {
+            padding: 160px 0;
+        }
+        .sectionlink {
+            height: 0;
+            width: 0;
+        }
+        section {
+            margin-top: 160px;
+            .row {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                .col {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    p {
+                    }
+                }
+                .image {
+                    height: 300px;
+                    width: 100%;
+                    margin-top: -30px;
+                }
+            }
+            .community {
+                flex-direction: column-reverse;
+            }
+            &:last-of-type {
+                margin-bottom: 160px;
+            }
+            .grid {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                p {
+                    width: 50%;
+                    margin: 0 0 10px 0 !important;
+                    img {
+                        margin-right: 7px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+        .faq {
+            h2 {
+                margin-bottom: 1em;
+            }
+            .flex-row {
+                flex-wrap: wrap;
+            }
+        }
+        .download {
+            .row2 {
+                margin-top: 3em;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                .email {
+                    margin-top: 2em;
+                    font-size: 1.5em;
+                    transition-duration: .4s;
+                    &:hover {
+                        opacity: 0.4;
+                    }
+                }
+            }
+        }
+    }
+    #footer {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            opacity: .5;
+        }
     }
 }
